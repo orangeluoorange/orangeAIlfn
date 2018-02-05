@@ -1,0 +1,20 @@
+上传项目步骤：
+1.进入项目，在终端运行
+$ git status
+2.查看要上传的文件是否正确，然后将项目下的所有文件添加到git跟踪范围
+$ git add .
+3.记录此次提交并上传
+$ git commit -m 'my project push'
+$ git push origin master
+
+注意:
+1.如果在git push origin master的时候出现错误：
+To github.com:orangeluoorange/orangeAIlfn.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:orangeluoorange/orangeAIlfn.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+那么应该进行git pull origin master --allow-unrelated-histories操作，之后再进行it push origin master命令。
